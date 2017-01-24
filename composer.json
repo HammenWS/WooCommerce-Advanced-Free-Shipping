@@ -1,0 +1,7 @@
+{
+    "name": "hammenws/woo-commerce-advanced-free-shipping",
+    "description": "Fork of WooCommerce Advacend Free Shipping plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0+",
+    "require": {}
+}
