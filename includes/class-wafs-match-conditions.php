@@ -19,7 +19,10 @@ class WAFS_Match_Conditions {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
+		add_action( 'wp_loaded', array($this, 'add_filters') );
+	}
 
+	public function add_filters() {
 		add_filter( 'wafs_match_condition_subtotal', array( $this, 'wafs_match_condition_subtotal' ), 10, 3 );
 		add_filter( 'wafs_match_condition_subtotal_ex_tax', array( $this, 'wafs_match_condition_subtotal_ex_tax' ), 10, 3 );
 		add_filter( 'wafs_match_condition_tax', array( $this, 'wafs_match_condition_tax' ), 10, 3 );
@@ -41,9 +44,7 @@ class WAFS_Match_Conditions {
 		add_filter( 'wafs_match_condition_stock', array( $this, 'wafs_match_condition_stock' ), 10, 3 );
 		add_filter( 'wafs_match_condition_stock_status', array( $this, 'wafs_match_condition_stock_status' ), 10, 3 );
 		add_filter( 'wafs_match_condition_category', array( $this, 'wafs_match_condition_category' ), 10, 3 );
-
 	}
-
 
 	/**
 	 * Subtotal.
